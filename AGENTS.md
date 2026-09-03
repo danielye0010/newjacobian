@@ -10,3 +10,5 @@
 - Push milestone commits to the user's GitHub account (`danielye0010`). Public repositories are acceptable after checking licenses, large files, and sensitive content.
 - Never force-push or rewrite published history unless the user explicitly requests it.
 - For a new project, discuss and recommend Windows or WSL2/Linux before implementation. Prefer WSL2 for Python/JAX, GCC/gfortran, CMake, CalculiX source builds, batch computation, and reproducible scientific environments. Prefer Windows for Unity, Windows-only executables, and GUI-heavy Office workflows.
+- For a small reproduction, choose Windows or WSL2/Linux automatically, state the choice briefly, and proceed without waiting unless the choice materially affects compatibility or results.
+- Do not clean, delete, move, or release space from unrelated files unless the user explicitly asks for that cleanup.
