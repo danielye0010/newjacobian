@@ -1,0 +1,79 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.local
+.env.*.local
+
+# Editors and OS files
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Build products and bundled binaries
+build/
+dist/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.exe
+*.dll
+*.lib
+*.a
+*.o
+*.obj
+*.pdb
+
+# Large generated scientific artifacts
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.mas
+*.sti
+*.frd
+*.dat
+*.out
+*.sta
+*.cvg
+*.mtx
+*.stl
+*.zip
+*.7z
+*.rar
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+
+# Generated and third-party trees
+/archive/
+/results/
+/tmp/
+/tools/
+**/solver_outputs/
+**/portable/
+/calculix_223_one_mode_implicit_proof/00_stock_source/
+/calculix_223_one_mode_implicit_proof/02_builds/
+/ADVISOR_M32_GEOMETRY_EXPORT_RECONSTRUCTED/work/CalculiX-Windows/
+/ADVISOR_M32_GEOMETRY_EXPORT_RECONSTRUCTED/work/ccx223/
+
+# Logs and scratch files
+*.log
+*.tmp
+*.temp
+
+# The existing large legacy tree is opt-in. Tracked baseline files remain
+# tracked; add a modified scientific module deliberately after reviewing it.
+/*/

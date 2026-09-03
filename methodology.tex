@@ -1,0 +1,205 @@
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Inverse-response formulation}
+\label{sec:inverse_response_formulation}
+
+Geometric compensation is formulated as an inverse-response problem: geometry specifies the correction to be achieved, while equilibrium determines the reference-geometry modification required to realize it. The methodology computes one compensated reference geometry offline before its subsequent physical realization. Full-response-consistent compensation is recovered through objective- and task-directed response actions, without identifying the complete response operator. The number of actions required depends on the spectral structure excited by the particular compensation task.
+
+Let \(X_0\) denote the nominal nodal geometry and \(a\in\mathbb R^M\) the compensation coefficient vector. The reference-geometry modification and compensated reference geometry are
+\begin{equation}
+\delta X=\Phi a,
+\qquad
+X_c(a)=X_0+\Phi a.
+\label{eq:compensated_reference_geometry}
+\end{equation}
+The derivation requires a fixed reduced compensation basis \(\Phi\). Modal coordinates provide the realization used in this work; the response formulation depends on the fixed parameterization of the reference-geometry modification. For equilibrium displacement \(u(a)\), the residual equation and resulting surface geometry are
+\[
+G(u(a),a)=0,
+\qquad
+y(a)=S[X_c(a)+u(a)],
+\]
+where \(S\) interpolates nodal coordinates to fixed surface quadrature points. The target, interpolation, and positive quadrature weights are held fixed. With
+\[
+W=\operatorname{blockdiag}_p\!\left(
+\sqrt{w_p/A_\Gamma}\,I_3\right),
+\qquad
+A_\Gamma=\sum_p w_p,
+\]
+the Euclidean norm \(\|Wv\|_2\) is the normalized area-weighted RMS of the physical surface field \(v\). The output metric includes the complete exterior surface.
+
+At the uncompensated equilibrium, define the geometric action and physical response by
+\begin{equation}
+\begin{aligned}
+\bar A&=S\Phi, & A&=W\bar A,\\
+\bar H&=\left.\frac{dy}{da}\right|_{a=0},
+& H&=W\bar H=A+WSu_{,a}|_0.
+\end{aligned}
+\label{eq:geometric_and_physical_response}
+\end{equation}
+Thus \(A\) describes the surface change implied directly by the reference-geometry modification, whereas \(H\) includes the local change induced by equilibrium. The physical affine surrogate is \(y(0)+\bar H a\). Its distinction from the geometric action makes response inversion necessary and motivates identifying the response components retained by different inverse models.
+
+\subsection{Physical and objective-visible response}
+\label{sec:physical_objective_visible_response}
+
+Projection onto the geometric action space gives the exact decomposition
+\begin{equation}
+H=AJ+H_\perp,
+\qquad
+J=A^+H,
+\qquad
+H_\perp=(I-AA^+)H,
+\label{eq:response_decomposition}
+\end{equation}
+where \(A^+\) is the Moore-Penrose pseudoinverse in the weighted output coordinates. Since \(A^TH_\perp=0\), the departure from geometric identity action separates as
+\[
+H-A=A(J-I)+H_\perp.
+\]
+The first term represents in-representation gain and coupling; the second represents physical response outside the retained geometric span. Direct Compensation uses the identity action \(A\). Reduced Response uses \(AJ\) to incorporate equilibrium-induced remapping within the representation. Explicit Full Response uses \(H\) and defines the physics-complete local reference endpoint.
+
+Direct Compensation has full local output equivalence when \(H=A\). For a fixed linearized objective operator \(C\), the weaker condition \(CH=CA\) gives the same objective-visible response, provided the residual offset is common. A response discrepancy that disappears after objective projection consequently leaves the objective response unchanged. The relevant inverse model therefore depends on how geometric error is observed.
+
+Each surface point is associated with a fixed nominal finite target feature \(\mathcal F_p\), including its faces and boundaries. Exact closest-point projection defines the weighted finite-feature residual and objective,
+\begin{equation}
+\rho(y)=W[y-\Pi_{\mathcal F}(y)],
+\qquad
+\Psi(y)=\frac12\|\rho(y)\|_2^2.
+\label{eq:finite_feature_objective}
+\end{equation}
+Within a verified region where every projection is unique and remains strictly inside the same planar face, the unit face normals define a constant residual projector,
+\[
+C=\operatorname{blockdiag}_p(n_pn_p^T),
+\qquad C=C^T=C^2.
+\]
+Tangential motion within a face leaves its closest-point distance unchanged, while \(C\) extracts the normal change. The scalar weight blocks imply \(CW=WC\). The frozen affine response surrogates therefore induce exactly affine residuals with
+\begin{equation}
+\begin{aligned}
+T_F&=CH, & T_R&=CAJ,\\
+E&=T_F-T_R=C(H-AJ)=CH_\perp.
+\end{aligned}
+\label{eq:objective_visible_response}
+\end{equation}
+Within the common fixed-face region, the Reduced and Full residuals share the same geometric offset \(b\). Their fixed quadratic continuation and exact finite-feature reprojection are evaluated separately outside that region.
+
+Objective projection can also induce an objective-aware reduced remapping \(J_C=(CA)^+(CH)\) that differs from the physical \(J\). An Objective-Aware Reduced Ablation isolates this explanatory mechanism. The main inverse formulation proceeds through \(T_F\): mechanics contains more response information than the compensation objective observes.
+
+\subsection{Inverse-sufficient and Reduced-relative formulation}
+\label{sec:inverse_sufficient_relative}
+
+For either \(T_R\) or \(T_F\), the fixed-feature quadratic is
+\begin{equation}
+\begin{aligned}
+f(a)&=\frac12\|b+Ta\|_2^2
+     =\frac12a^TQa+g^Ta+\frac12\|b\|_2^2,\\
+Q&=T^TT,\qquad g=T^Tb.
+\end{aligned}
+\label{eq:inverse_sufficient}
+\end{equation}
+For a fixed residual offset \(b\) and admissible compensation set, two response operators that induce the same \((Q,g)\) define the same quadratic inverse problem, even if their output response fields differ. The information relevant to compensation thus follows
+\[
+H\longrightarrow CH\longrightarrow(Q,g):
+\]
+\(H\) describes what mechanics contains, \(CH\) what the objective sees, and \((Q,g)\) what the inverse depends on. Expanding \(T_F=T_R+E\) yields
+\begin{equation}
+\begin{aligned}
+Q_F-Q_R&=T_R^TE+E^TT_R+E^TE,\\
+g_F-g_R&=E^Tb.
+\end{aligned}
+\label{eq:visible_defect_inverse_bridge}
+\end{equation}
+These identities connect physical response departure to the change in the inverse problem. The visible defect matters through its interaction with the Reduced response and the residual offset.
+
+We take the Reduced response model as an available reference inverse model and ask how much additional Full-response information is required to recover the Full-response-consistent compensation coefficients. Let \(a_R\) solve the unconstrained Reduced quadratic, so that \(Q_Ra_R+g_R=0\). Assume that \(Q_R\) and \(Q_F\) are positive definite on the declared active compensation space. Introduce the Reduced-relative coordinates and curvature correction
+\[
+x=Q_R^{1/2}(a-a_R),
+\qquad
+K=Q_R^{-1/2}(Q_F-Q_R)Q_R^{-1/2},
+\]
+and the task vector
+\[
+\begin{aligned}
+h&=Q_R^{-1/2}\nabla f_F(a_R)\\
+ &=Q_R^{-1/2}\big[(Q_F-Q_R)a_R+(g_F-g_R)\big].
+\end{aligned}
+\]
+Substituting \(a=a_R+Q_R^{-1/2}x\) into the Full quadratic gives
+\[
+f_F(a_R+Q_R^{-1/2}x)
+=f_F(a_R)+h^Tx+\frac12x^T(I+K)x.
+\]
+Stationarity therefore reduces the Full inverse to
+\begin{equation}
+(I+K)x_F=-h,
+\qquad
+a_F=a_R+Q_R^{-1/2}x_F.
+\label{eq:inverse_relative}
+\end{equation}
+The Reduced model supplies the reference inverse geometry. Relative to this geometry, the remaining Full mechanics enters only through the inverse-relative curvature correction \(K\) and task vector \(h\). For rank-deficient \(Q_R\), the construction is applied on its positive active space, with Full-visible Reduced-null directions included explicitly when present. Equation~\eqref{eq:inverse_relative} identifies the corrective information that Full-response actions need to supply.
+
+\subsection{Inverse-visible response acquisition}
+\label{sec:inverse_visible_acquisition}
+
+The first Full interrogation acquires the task vector. A forward action \(Ha_R\) forms the Full quadratic residual \(b+CHa_R\), and an adjoint action gives its gradient,
+\[
+\nabla f_F(a_R)=H^TC^T(b+CHa_R).
+\]
+Combining this exact Full task vector with the available Reduced inverse geometry gives the first inverse-visible correction,
+\begin{equation}
+x_{\mathrm{IV1}}=-h,
+\qquad
+a_{\mathrm{IV1}}=a_R-Q_R^{-1}\nabla f_F(a_R).
+\label{eq:iv1}
+\end{equation}
+Using Eq.~\eqref{eq:inverse_relative}, its error satisfies the exact identity
+\begin{equation}
+x_{\mathrm{IV1}}-x_F=Kx_F.
+\label{eq:iv1_error}
+\end{equation}
+One-interrogation accuracy is consequently determined by the relative curvature defect acting on the correction required by the present task.
+
+To identify the structure governing further refinement, let \(I+K=U\Lambda U^T\), where the columns \(u_i\) of \(U\) are orthonormal eigenvectors and \(\Lambda\) has positive eigenvalues \(\lambda_i\). Writing \(\beta_i=u_i^Th\) gives
+\begin{equation}
+h=\sum_i\beta_i u_i,
+\qquad
+x_F=-\sum_i\frac{\beta_i}{\lambda_i}u_i.
+\label{eq:task_weighted_spectrum}
+\end{equation}
+Only inverse eigen-directions excited by the current task vector contribute to the Full correction. Refinement therefore minimizes the correction quadratic over progressively richer task-directed spaces. The shift by the identity preserves these spaces:
+\begin{equation}
+\begin{aligned}
+\mathcal K_m(I+K,h)
+&=\mathcal K_m(K,h)\\
+&=\operatorname{span}\{h,Kh,\ldots,K^{m-1}h\}.
+\end{aligned}
+\label{eq:krylov_structure}
+\end{equation}
+If \(h\) has spectral support on only \(s\) distinct eigenvalues of \(I+K\), this refinement from \(x=0\) recovers the Full correction in at most \(s\) iterations in exact arithmetic. Few-action difficulty is thus governed by the task-weighted spectral structure of \((K,h)\), rather than the dimension of the complete Full response operator.
+
+PCG with Reduced preconditioning is the numerical realization of this refinement. Its Full curvature actions are evaluated through
+\[
+Q_Fv=H^TC^TCHv,
+\]
+using one Full forward/adjoint pair per curvature action. IV-1 uses one such pair for the initial task vector; PCG-3 uses three cumulative pairs, comprising initial task-vector acquisition and two curvature refinements. Inverse-Visible Compensation thereby approaches the Explicit Full Response endpoint through the response directions exposed by the inverse task. Once the compensation coefficients are obtained, \(\delta X=\Phi a\) defines the single reference-geometry modification. Native FEM actions provide the physical realization of the required response operations.
+
+\subsection{Native finite-element response actions}
+\label{sec:native_fem_response_actions}
+
+At the converged uncompensated equilibrium, let \(K_T=G_u\) be the tangent matrix, \(B=G_a\) the design-derivative basis, and \(L\) the map from free displacement increments to weighted surface coordinates. Differentiating equilibrium in a compensation direction \(v\) gives
+\begin{equation}
+K_Ts_v=-Bv,
+\qquad
+Hv=Av+Ls_v.
+\label{eq:native_forward}
+\end{equation}
+The direct geometric contribution \(Av\) and equilibrium contribution \(Ls_v\) together form the Full forward response. Eliminating \(s_v\) gives \(H=A-LK_T^{-1}B\); its transpose is evaluated by the adjoint system
+\begin{equation}
+K_T^T\boldsymbol\lambda=L^Tw,
+\qquad
+H^Tw=A^Tw-B^T\boldsymbol\lambda.
+\label{eq:native_adjoint}
+\end{equation}
+The adjoint is taken under Euclidean inner products for the already weighted response coordinates. Each forward or adjoint action uses one tangent solve. The implemented symmetric tangent permits reuse of one factorization for forward and transpose solves.
+
+The design-derivative basis \(B\) is materialized, while the Full response matrix \(H\) is evaluated through these actions without assembly. IV-1 requires two tangent solves and PCG-3 requires six, compared with 32 solves for explicit 32-column Full-response acquisition. The action formulation therefore acquires the additional Full-response information needed by the inverse while retaining the available Reduced model as its reference geometry.
+
+The response formulation is local to a differentiable equilibrium branch with a nonsingular tangent. The inverse identities are exact for the fixed-feature quadratic on the declared active compensation space, and their agreement with the finite-feature objective holds within the verified projection region. The resulting compensated reference geometry is subsequently evaluated through fresh nonlinear equilibrium and exact finite-feature reprojection.
