@@ -77,3 +77,25 @@ CMakeCache.txt
 # The existing large legacy tree is opt-in. Tracked baseline files remain
 # tracked; add a modified scientific module deliberately after reviewing it.
 /*/
+
+# Curated experiment source. Track code and module instructions only.
+!/experiments/
+/experiments/**
+!/experiments/**/
+!/experiments/**/*.py
+!/experiments/**/README*.md
+
+# Paper assembly and figure-export helpers are not core experiment code.
+/experiments/response_jacobian_step6_complete_paper_draft/
+/experiments/response_jacobian_step7_tex_manuscript/
+/experiments/response_jacobian_figure_generation/
+
+# Repository-facing files shipped with core code.
+!/README.md
+!/requirements.txt
+
+# Local research-writing and Codex workflow files.
+/AGENTS.md
+/*.tex
+/FINAL_UNIFIED_METHODOLOGY_FRAMEWORK*.md
+/NUMERICAL_STUDY_FIGURE_ASSET_AUDIT.md
