@@ -1,0 +1,14 @@
+{
+  "frozen_before_action_results": true,
+  "modal_vectors": [
+    {"label": "e33", "rule": "48-vector with entry 33 equal to one and all others zero"},
+    {"label": "e40", "rule": "48-vector with entry 40 equal to one and all others zero"},
+    {"label": "e48", "rule": "48-vector with entry 48 equal to one and all others zero"},
+    {"label": "dense", "rule": "numpy default_rng(20260909).standard_normal(48), then Euclidean normalization"}
+  ],
+  "output_vectors": "For each listed modal vector, use the corresponding sequential draw from numpy default_rng(20260910).standard_normal(49824), then Euclidean normalization.",
+  "identity": "w^T H v = v^T H^T w",
+  "normalized_discrepancy": "absolute(lhs-rhs) / max(abs(lhs), abs(rhs), smallest positive normal float)",
+  "inherited_identity_tolerance": 1e-10,
+  "represented_tangent_asymmetry_tolerance": 1e-14
+}

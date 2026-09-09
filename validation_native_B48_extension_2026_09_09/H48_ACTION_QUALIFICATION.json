@@ -1,0 +1,54 @@
+{
+  "verdict": "PASS",
+  "inherited_identity_tolerance": 1e-10,
+  "represented_tangent_asymmetry_tolerance": 1e-14,
+  "represented_tangent_asymmetry_frobenius": 0.0,
+  "maximum_identity_normalized_discrepancy": 1.4224940579231957e-13,
+  "tests": [
+    {
+      "label": "e33",
+      "modal_vector_sha256": "e201eb0bd4fb2416b8ed14eab07247fd28a49c459fbfb8e29f076730d33ae962",
+      "output_vector_sha256": "75a883af582118bb381266990aba747fbb5e2aaed31789a0cfba11a13b8963ef",
+      "forward_inner_product": 5.67850540316707e-05,
+      "adjoint_inner_product": 5.6785054031670345e-05,
+      "absolute_discrepancy": 3.5236570605778894e-19,
+      "normalized_discrepancy": 6.205254394250716e-15,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "label": "e40",
+      "modal_vector_sha256": "deac7971d3a9deeecb2250551a12c6ba7bb9e60e21cc8aae015c704369f51a6c",
+      "output_vector_sha256": "51cfbd68315e037dac5e213905b8218d939ab859760ed237619f5c6f29eabf0d",
+      "forward_inner_product": 6.618244999535582e-05,
+      "adjoint_inner_product": 6.618244999536164e-05,
+      "absolute_discrepancy": 5.8140341499535175e-18,
+      "normalized_discrepancy": 8.784857844278946e-14,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "label": "e48",
+      "modal_vector_sha256": "ae5ce4565426fa87794dce7311a011027ee5571bf7b1ee3aa4a12d1292f54d4a",
+      "output_vector_sha256": "88fafe869863bf85c224b45b70aefb531770bb01ae5f559aeedb5ee62f0008cd",
+      "forward_inner_product": 0.0002868663911685661,
+      "adjoint_inner_product": 0.0002868663911685645,
+      "absolute_discrepancy": 1.6263032587282567e-18,
+      "normalized_discrepancy": 5.669201094291389e-15,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "label": "dense_seed_20260909",
+      "modal_vector_sha256": "48c77b2979957bc1a12c623890236cd1f21a5f6a72702c08058390c2c14269a8",
+      "output_vector_sha256": "625e3af8dab20a05d2dea9482b7f554122a77266c0e9fb8579021ede7b874899",
+      "forward_inner_product": 9.679736455747918e-05,
+      "adjoint_inner_product": 9.679736455749295e-05,
+      "absolute_discrepancy": 1.3769367590565906e-17,
+      "normalized_discrepancy": 1.4224940579231957e-13,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "native_paths": "forward: -Bv -> K solve -> W S(Phi v + u); adjoint: S^T Ww -> K^T solve -> Phi^T pullback - B^T lambda"
+}

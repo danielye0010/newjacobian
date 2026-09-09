@@ -1,0 +1,32 @@
+{
+  "phase": 0,
+  "verdict": "PASS_TO_PHASE_1",
+  "authoritative_source": "native_M32A_blind/source/nonlingeo.c",
+  "authoritative_source_sha256": "8b2055f9f6dee896b2ead1a2e7e5831ff66c287d861d79c4b04ee382a8296178",
+  "required_change_classes": ["A", "B", "C"],
+  "scientific_derivative_logic_change_required": false,
+  "unknown_change_required": false,
+  "scientific_call_ranges_unchanged": [[4486, 4520], [4585, 4617]],
+  "occurrences": [
+    {"lines": "4358-4362", "classification": "B", "change": "generalize acquisition description"},
+    {"lines": "4367", "classification": "A", "change": "introduce fixed maximum capacity while retaining runtime count"},
+    {"lines": "4372-4374", "classification": "C", "change": "capacity 33 to 49"},
+    {"lines": "4381", "classification": "C", "change": "state/private hash capacities 35/33 to 51/49"},
+    {"lines": "4392-4398", "classification": "A/B", "change": "accept configured count 1 through 48 and generalize error label"},
+    {"lines": "4443-4446", "classification": "A", "change": "loop and control split use configured count"},
+    {"lines": "4478", "classification": "B", "change": "generalize error label"},
+    {"lines": "4523-4527", "classification": "A/B", "change": "control index uses configured count and qualification filename"},
+    {"lines": "4531,4540,4544-4548,4572", "classification": "B", "change": "generalize labels/comments/control name"},
+    {"lines": "4619-4623", "classification": "B", "change": "generalized tangent artifact names"},
+    {"lines": "4624-4626", "classification": "A", "change": "post-tangent checkpoint uses configured count plus two"},
+    {"lines": "4635-4656", "classification": "A/B", "change": "configured runtime counts, order, indices, and names"},
+    {"lines": "4659-4666", "classification": "A/B", "change": "configured state-hash loop and indices"},
+    {"lines": "4669-4686", "classification": "A/B", "change": "configured private/lifecycle loops and roles"},
+    {"lines": "4695", "classification": "B", "change": "generalize completion label"}
+  ],
+  "frozen_checks": {
+    "final_package": "PASS_66_OF_66",
+    "R6A_machine_readable_parse": "PASS",
+    "git_fsck": "PASS"
+  }
+}

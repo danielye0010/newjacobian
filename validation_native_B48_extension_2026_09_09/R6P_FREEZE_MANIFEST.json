@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "task": "R6P_NATIVE_B48_EXTENSION_QUALIFICATION",
+  "verdict": "PASS",
+  "artifacts": [
+    {
+      "path": "NATIVE_B48_EXTENSION_HANDOFF.md",
+      "bytes": 7231,
+      "sha256": "0cc64fb66172727df234585bd4f4fc6a949c2851b46c8490b0d47747f66b03da",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_SOURCE_BOUNDARY_AUDIT.json",
+      "bytes": 2189,
+      "sha256": "23f0131899b68a31f3ccecf3a2b495b4a248a2b1eb9b0e4f5a4feb4c81715b0c",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_SOURCE_BOUNDARY_AUDIT.md",
+      "bytes": 2850,
+      "sha256": "3f2fd1c00f605f0eda4505a81a0c1797c67f0c680c18e878f548c7ceced4182c",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_SOURCE_DIFF.md",
+      "bytes": 1823,
+      "sha256": "a129792330141d73b8a89766be75f6e2d7619e20623d2d0c6bff767e3a21c996",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B32_BACKWARD_COMPATIBILITY.json",
+      "bytes": 4455,
+      "sha256": "4e68de5ed814f36817a77674a5fa9e37bd288f58b174fd87a8d1036a57473471",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B32_COLUMN_ERRORS.csv",
+      "bytes": 4810,
+      "sha256": "f55a1b8f0d15ce6415140b1b0a0ec66e7ffd05372b5c6d2d30fdc155da864fc9",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_PROVENANCE.json",
+      "bytes": 17818,
+      "sha256": "e893b3314075441b55cbe4124413112385b2ea2db6800a4169f536b589de8f4c",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_PREFIX_AUDIT.json",
+      "bytes": 9848,
+      "sha256": "a7170bcce527ddd61d466e7c46ea86f783de221a6cdb2ed16deafbb9d7236ac5",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_PHI_MANIFEST.csv",
+      "bytes": 6174,
+      "sha256": "8434422d5c77c437b66dbc934d8d8198d67635c821b2c7ac306afdefc7545b42",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_FD_PREREGISTRATION.json",
+      "bytes": 1276,
+      "sha256": "13adcbe7386b245fc9877d4f79517aeba2699ec9430da877c726bd5841b83fc0",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_NEW_MODE_STEP_REFINEMENT.csv",
+      "bytes": 2360,
+      "sha256": "99ed3af7048b97aae40f25503057ea543cf499f6e3252d1eb4b4869224d7b42e",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_NEW_MODE_FD_QUALIFICATION.csv",
+      "bytes": 1711,
+      "sha256": "9a6c3ab4b0e7eb8ff56df1d35d1c44572ddab828c99fb02d7fa5c2adc5bc8574",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_DERIVATIVE_QUALIFICATION.json",
+      "bytes": 815,
+      "sha256": "3a5831fdc1d62366c6c2638d3c66f38a8798de4f64d20291cd154aca937f2032",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_ACTION_PREREGISTRATION.json",
+      "bytes": 866,
+      "sha256": "c0ccd28ba0be1f24f9c2e343bda74b10545a83edfc27f7d06981db868a72ba4d",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_PREFIX_AUDIT.json",
+      "bytes": 1311,
+      "sha256": "d45f0c8305484ccbaf25b4f0153585211f86c14159c23424b09f1d0e8350ae1f",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_ADJOINT_IDENTITY.csv",
+      "bytes": 1110,
+      "sha256": "6d0eb5792d69c9ba60b940889f0c9a3b4bae97fb792a17cf4dca2a05316a30d3",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_ACTION_QUALIFICATION.json",
+      "bytes": 2424,
+      "sha256": "90876966ccca67e672f40a4a81ad7782da73fb413a5732ab1018cc42da94e75c",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_HISTORICAL_CONTEXT.json",
+      "bytes": 422,
+      "sha256": "c7a61f80d7240555368a926315599bbceb6d5a5ed77a888312e9d70c47cfe503",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "R6P_FINAL_DECISION.json",
+      "bytes": 11273,
+      "sha256": "ba7834de881fd9aef31ec13481afee16f4b6544abd2c1a4444fdc818058e1921",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_native_49536x48.bin",
+      "bytes": 19021824,
+      "sha256": "90c66d7e244d0e03a5692e25bd6fd18a7a060738762e5e3230b5f78f799e79ab",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "B48_native_49536x48.npy",
+      "bytes": 19021952,
+      "sha256": "41678f39c68d48febff73dc25292181ddb625c59c450c46844410056a6f60dc6",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_native_49824x48.bin",
+      "bytes": 19132416,
+      "sha256": "fca64c0628acf3196d138ccbb46bd1a4b62beac0ae6306d144189a4f60108ae3",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "H48_native_49824x48.npy",
+      "bytes": 19132544,
+      "sha256": "88960cdc43aa4f9e4805cc95586191441a2b0e59d71eacbaf9010608629f1e74",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "Hbar_native_49824x48.bin",
+      "bytes": 19132416,
+      "sha256": "7f228faff59c5f0c8599441d8a46ee9b89a0e12a863c2e9db60e82280e1c5cf2",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "Hbar_native_49824x48.npy",
+      "bytes": 19132544,
+      "sha256": "f88340a609f3d100826efaa2119be0e70ffbd52dd7c34cf483ed575517e7db77",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "U_a_active_49536x48.bin",
+      "bytes": 19021824,
+      "sha256": "d6173fe006577cb7818c3bdf547a09c129b9b4a504957f119a2c45eeda8f6a1c",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "U_a_active_49536x48.npy",
+      "bytes": 19021952,
+      "sha256": "2d48a9403d0ee638578650ddc2c38e893b1e13e6bdf62ef3ace216383cc057e3",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "generalized_source/nonlingeo.c",
+      "bytes": 190667,
+      "sha256": "34dfba3100fd58f63313702e3f994b8bdef0b981f72531de878f95bceb75c4b2",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "generalized_source/native_B48Q_i4.exe",
+      "bytes": 7713361,
+      "sha256": "4af4cbd8b07e196e918093dca2665b2bcc3d64a828536d292255285d0ac64291",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "generalized_source/ccx_2.23_B48Q.a",
+      "bytes": 8525130,
+      "sha256": "3797f22ff07be1326bbdc84ef96120e42ac6e8161f1eb7ee44ecdd3aced59488",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "solver/solve_B48Q.c",
+      "bytes": 5944,
+      "sha256": "a9d42838d61f1e5df253dbead69802b301ceb4967e7e14298a141f439a4302e2",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "solver/solve_B48Q.exe",
+      "bytes": 1178188,
+      "sha256": "ba790e9a85c831a2b64b3c96078b2a104c540b48129e76650fa19043b2bfa594",
+      "description": "R6P frozen qualification artifact"
+    },
+    {
+      "path": "run_M48/B48Q_solver_runtime.txt",
+      "bytes": 16126,
+      "sha256": "4aec5b58029ade3188191133b4d308a2c52b4e7ecb2a74e102e632d7b35ca621",
+      "description": "R6P frozen qualification artifact"
+    }
+  ]
+}

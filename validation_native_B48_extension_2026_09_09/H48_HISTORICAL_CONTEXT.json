@@ -1,0 +1,13 @@
+{
+  "performed": true,
+  "historical_definition": "finite-step response object",
+  "new_definition": "qualified native tangent response",
+  "qualification_oracle": false,
+  "historical_shape": [
+    49824,
+    48
+  ],
+  "relative_frobenius_difference": 0.0003958888033184722,
+  "columnwise_median_relative_difference": 0.00039742486549648,
+  "columnwise_maximum_relative_difference": 0.00042294769180099785
+}

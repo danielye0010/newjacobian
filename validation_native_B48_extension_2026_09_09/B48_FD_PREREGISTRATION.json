@@ -1,0 +1,15 @@
+{
+  "frozen_before_fd_evaluation": true,
+  "representative_modes_1_based": [33, 40, 48],
+  "h0": 0.08957732492949613,
+  "h0_provenance": "calculix_223_one_mode_implicit_proof/03_mode_lock/proof_vector_lock.json authoritative_coefficient_step_h_j; established fixed-state centered residual-derivative validation scale",
+  "evaluated_steps": [
+    0.08957732492949613,
+    0.044788662464748066,
+    0.022394331232374033
+  ],
+  "native_derivative_relative_error_tolerance": 0.01,
+  "stable_regime_rule": "A candidate step h0/2 or h0/4 is stable only if, for every representative mode, native-vs-FD relative error is <= 0.01, FD change from the immediately coarser step is <= 0.01, and native-vs-FD error is no more than twice the immediately coarser-step error. Select the finest common stable candidate. If neither candidate is stable, stop for review.",
+  "confirmation_rule": "Use the single selected common step for modes 33 through 48. Do not select by individual mode.",
+  "implementation_note": "The pre-existing opt-in fixed-state centered-residual hook evaluates one additional h0/8 point. That raw point is retained as inherited audit output but is excluded from the preregistered three-step selection and all gates. The production derivative source is not changed."
+}

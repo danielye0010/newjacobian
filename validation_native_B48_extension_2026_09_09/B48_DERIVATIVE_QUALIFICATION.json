@@ -1,0 +1,28 @@
+{
+  "verdict": "PASS",
+  "h0": 0.08957732492949613,
+  "representative_modes": [
+    33,
+    40,
+    48
+  ],
+  "preregistered_steps": [
+    0.08957732492949613,
+    0.044788662464748066,
+    0.022394331232374033
+  ],
+  "inherited_relative_tolerance": 0.01,
+  "stable_candidates": {
+    "h0/2": true,
+    "h0/4": true
+  },
+  "confirmation_step_label": "h0/4",
+  "confirmation_step": 0.022394331232374033,
+  "new_mode_count": 16,
+  "median_relative_error": 4.040520886656069e-06,
+  "p90_relative_error": 6.2674722985616606e-06,
+  "maximum_relative_error": 7.822339901284574e-06,
+  "worst_mode": 33,
+  "all_new_modes_passed": true,
+  "cancellation_diagnostic": "The inherited hook also emitted h0/8 raw files; those are retained but excluded from selection and gates per preregistration."
+}

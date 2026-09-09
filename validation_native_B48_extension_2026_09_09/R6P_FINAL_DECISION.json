@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-09T15:08:55.887820+00:00",
+  "task": "R6P_NATIVE_B48_EXTENSION_QUALIFICATION",
+  "verdict": "PASS",
+  "gates": {
+    "source_boundary_audit": true,
+    "dimension_only_source_diff": true,
+    "M32_backward_compatibility": true,
+    "B48_first_32_prefix": true,
+    "new_modes_33_48_independent_FD": true,
+    "FD_locked_state_invariance": true,
+    "H48_first_32_prefix": true,
+    "new_range_forward_adjoint_identity": true,
+    "authoritative_M32_source_untouched": true,
+    "authoritative_H32_untouched": true
+  },
+  "B32": {
+    "frobenius_relative_error": 0.0,
+    "all_columns_byte_equal": true
+  },
+  "B48_prefix": {
+    "frobenius_relative_error": 0.0,
+    "all_columns_byte_equal": true
+  },
+  "new_mode_FD": {
+    "confirmation_step": 0.022394331232374033,
+    "median_relative_error": 4.040520886656069e-06,
+    "p90_relative_error": 6.2674722985616606e-06,
+    "maximum_relative_error": 7.822339901284574e-06,
+    "worst_mode": 33
+  },
+  "H48_prefix": {
+    "frobenius_relative_error": 0.0,
+    "all_prefix_bytes_equal": true
+  },
+  "forward_adjoint": {
+    "maximum_normalized_discrepancy": 1.4224940579231957e-13,
+    "tolerance": 1e-10
+  },
+  "historical_H48_secondary_context": {
+    "performed": true,
+    "historical_definition": "finite-step response object",
+    "new_definition": "qualified native tangent response",
+    "qualification_oracle": false,
+    "historical_shape": [
+      49824,
+      48
+    ],
+    "relative_frobenius_difference": 0.0003958888033184722,
+    "columnwise_median_relative_difference": 0.00039742486549648,
+    "columnwise_maximum_relative_difference": 0.00042294769180099785
+  },
+  "FD_state_checks": [
+    {
+      "mode": 33,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 34,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 35,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 36,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 37,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 38,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 39,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 40,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 41,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 42,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 43,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 44,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 45,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 46,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 47,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    },
+    {
+      "mode": 48,
+      "final_vold_matches_locked": true,
+      "final_vold_after_matches_locked": true,
+      "prestr_matches_locked": true,
+      "prestr_after_matches_locked": true,
+      "material_labels_invariant": true,
+      "history_invariant": true,
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "generalized_source/nonlingeo.c",
+      "bytes": 190667,
+      "sha256": "34dfba3100fd58f63313702e3f994b8bdef0b981f72531de878f95bceb75c4b2",
+      "description": "qualified dimension-generalized production source"
+    },
+    {
+      "path": "generalized_source/native_B48Q_i4.exe",
+      "bytes": 7713361,
+      "sha256": "4af4cbd8b07e196e918093dca2665b2bcc3d64a828536d292255285d0ac64291",
+      "description": "qualified CalculiX executable"
+    },
+    {
+      "path": "generalized_source/ccx_2.23_B48Q.a",
+      "bytes": 8525130,
+      "sha256": "3797f22ff07be1326bbdc84ef96120e42ac6e8161f1eb7ee44ecdd3aced59488",
+      "description": "isolated build archive"
+    },
+    {
+      "path": "solver/solve_B48Q.c",
+      "bytes": 5944,
+      "sha256": "a9d42838d61f1e5df253dbead69802b301ceb4967e7e14298a141f439a4302e2",
+      "description": "48-action direct-solver dimension extension"
+    },
+    {
+      "path": "solver/solve_B48Q.exe",
+      "bytes": 1178188,
+      "sha256": "ba790e9a85c831a2b64b3c96078b2a104c540b48129e76650fa19043b2bfa594",
+      "description": "48-action direct solver executable"
+    },
+    {
+      "path": "B48_native_49536x48.bin",
+      "bytes": 19021824,
+      "sha256": "90c66d7e244d0e03a5692e25bd6fd18a7a060738762e5e3230b5f78f799e79ab",
+      "description": "qualified native residual-design matrix"
+    },
+    {
+      "path": "B48_native_49536x48.npy",
+      "bytes": 19021952,
+      "sha256": "41678f39c68d48febff73dc25292181ddb625c59c450c46844410056a6f60dc6",
+      "description": "qualified native residual-design matrix with shape metadata"
+    },
+    {
+      "path": "H48_native_49824x48.bin",
+      "bytes": 19132416,
+      "sha256": "fca64c0628acf3196d138ccbb46bd1a4b62beac0ae6306d144189a4f60108ae3",
+      "description": "qualified weighted native tangent response"
+    },
+    {
+      "path": "H48_native_49824x48.npy",
+      "bytes": 19132544,
+      "sha256": "88960cdc43aa4f9e4805cc95586191441a2b0e59d71eacbaf9010608629f1e74",
+      "description": "qualified weighted native tangent response with shape metadata"
+    },
+    {
+      "path": "Hbar_native_49824x48.bin",
+      "bytes": 19132416,
+      "sha256": "7f228faff59c5f0c8599441d8a46ee9b89a0e12a863c2e9db60e82280e1c5cf2",
+      "description": "unweighted native tangent response"
+    },
+    {
+      "path": "U_a_active_49536x48.bin",
+      "bytes": 19021824,
+      "sha256": "d6173fe006577cb7818c3bdf547a09c129b9b4a504957f119a2c45eeda8f6a1c",
+      "description": "48 ordered native tangent solutions"
+    },
+    {
+      "path": "B48_PHI_MANIFEST.csv",
+      "bytes": 6174,
+      "sha256": "8434422d5c77c437b66dbc934d8d8198d67635c821b2c7ac306afdefc7545b42",
+      "description": "ordered Phi48 manifest"
+    }
+  ],
+  "claims_supported": [
+    "The validated native M32 residual-design implementation generalizes to 48 ordered production modes using dimension plumbing only.",
+    "Generalized M32 and the first 32 B48 columns reproduce authoritative native B32 exactly.",
+    "Modes 33 through 48 pass independent locked-state symmetric residual finite-difference qualification at the preregistered common step.",
+    "H48 is a qualified native tangent response whose first 32 columns reproduce authoritative native H32 exactly.",
+    "Native forward and transpose-adjoint paths satisfy the inherited identity tolerance for e33, e40, e48, and a fixed dense direction."
+  ],
+  "claims_not_supported": [
+    "No R6A inverse-information scaling, Direct-start trajectory, threshold, K_D scaling, nonlinear compensation, timing scaling, M64 result, or manuscript claim was evaluated.",
+    "Historical finite-step H48 is not interchangeable with or an oracle for the new native tangent H48."
+  ],
+  "prohibited_work_checks": {
+    "Direct_start_PCG_run": false,
+    "m99_m999_m9999_evaluated": false,
+    "R6A_KD_scaling_computed": false,
+    "nonlinear_compensated_or_perturbed_geometry_FEM_run": false,
+    "M48_compensation_run": false,
+    "timing_scaling_run": false,
+    "M64_work": false,
+    "manuscript_edited": false
+  },
+  "baseline_scope_note": "The single B48 production construction necessarily included its one frozen baseline equilibrium. Each opt-in FD process initialized CalculiX with the common deck and then restored byte-identical locked vold/prestr before every signed residual assembly; no perturbed geometry was re-equilibrated and no compensated nonlinear FEM was run.",
+  "recommendation": "Resume the original R6A inverse-information scaling experiment.",
+  "R6A_resumed_in_this_task": false
+}
